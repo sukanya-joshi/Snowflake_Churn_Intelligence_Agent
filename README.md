@@ -60,6 +60,5 @@ The streamlit uses python code auto-generated using https://openapi-generator.te
 <img width="1693" height="831" alt="Screenshot 2025-10-15 at 3 12 08 PM" src="https://github.com/user-attachments/assets/58a54266-92ea-4b32-afa2-d0915dc711c0" />
 <img width="1691" height="893" alt="Screenshot 2025-10-15 at 3 12 22 PM" src="https://github.com/user-attachments/assets/0613421a-c7a7-4be5-a7ac-51038a17a69a" />
 
-
-
+Dataset sample referenced from Kaggle: https://www.kaggle.com/datasets/muhammadshahidazeem/customer-churn-dataset/data?select=customer_churn_dataset-training-master.csv
 
