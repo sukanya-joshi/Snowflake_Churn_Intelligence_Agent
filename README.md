@@ -1,4 +1,4 @@
-# churn_intelligence_agent
+# Churn Intelligence Agent
 This is a project which combines Snowflake ML and AI to build a churn intelligence agent.
 Step-By-Step Guide
 For the easiest implementation to get the streamlit application running (without the ML implementation):
