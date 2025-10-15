@@ -1,7 +1,9 @@
 # Churn Intelligence Agent using Snowflake ML and Snowflake Intelligence
 This is a project which combines Snowflake ML and AI to build a churn intelligence agent.
-Step-By-Step Guide
-For the easiest implementation to get the streamlit application running (without the ML implementation):
+
+## Step-By-Step Guide
+
+### Easiest Implementation of Streamlit App (without ML):
 
 1. Upload CHURN_DATA_EXPLANATIONS.csv into a Snowflake table.
 
@@ -49,4 +51,13 @@ Streamlit App Screenshots:
 
 <img width="1693" height="831" alt="Screenshot 2025-10-15 at 3 12 08 PM" src="https://github.com/user-attachments/assets/58a54266-92ea-4b32-afa2-d0915dc711c0" />
 <img width="1691" height="893" alt="Screenshot 2025-10-15 at 3 12 22 PM" src="https://github.com/user-attachments/assets/0613421a-c7a7-4be5-a7ac-51038a17a69a" />
+
+
+### End-to-end implementation (with ML):
+
+1. Upload CUSTOMER_CHURN_DATA.csv into a Snowflake table.
+
+2. Import and run the Churn_ML_Modeling.ipynb into a Container Runtime Notebook using Snowsight. Once you run this, there will be a table that gets saved called "CHURN_DATA_EXPLANATIONS". This is the same data as the CHURN_DATA_EXPLANATIONS.csv in the repo.
+
+3. Repeat Steps 2-5 from the Easiest Implementation of Streamlit App (without ML) section at the top. 
 
