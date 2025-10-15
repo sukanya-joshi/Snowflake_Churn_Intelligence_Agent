@@ -15,6 +15,7 @@ Under Programmatic access tokens, click Generate new token
 Copy and save the token for later (you will not be able to see it again)
 
 4. Create the Agent
+   
 Create the Agent in Snowsight navigating to AI & ML » Agents » Create Agent (see step by step in the QuickStart Guide). Name the agent as "CHURN_INTELLIGENCE_AGENT" and use the CHURN_EXPLANATION_TOOL semantic view as your tool under the Cortex Analyst section.
 
 After creating you can chat with the Agent via Snowflake Intelligence. In Snowsight, click on AI & ML » Snowflake Intelligence, select the CHURN_INTELLIGENCE_AGENT in the chat bar, and ask any questions you'd like!
@@ -22,14 +23,21 @@ After creating you can chat with the Agent via Snowflake Intelligence. In Snowsi
 5. Run the streamlit
 Now that you have created your agent, run the sample streamlit to interact with it. Make sure to populate the PAT and HOST params correctly. (Note: this guide was built using Python 3.11)
 
+```bash
+# 1. Set up Python virtual environment
 python3 -m venv venv
 source venv/bin/activate
+
+# 2. Install required packages
 pip3 install -r requirements.txt
 
+# 3. Run Streamlit app with required environment variables
 CORTEX_AGENT_DEMO_PAT=<PAT> \
 CORTEX_AGENT_DEMO_HOST=<ACCOUNT_URL> \
 CORTEX_AGENT_DEMO_DATABASE="SNOWFLAKE_INTELLIGENCE" \
 CORTEX_AGENT_DEMO_SCHEMA="AGENTS" \
 CORTEX_AGENT_DEMO_AGENT="CHURN_INTELLIGENCE_AGENT" \
 streamlit run data_agent_demo.py
+```
+
 The streamlit uses python code auto-generated using https://openapi-generator.tech/. It creates the pydantic classes in /models for the request and response objects based on the OpenAPI spec at cortexagent-run.yaml. You can regenerate those files by running the script openapi-generator.sh (assuming you have docker installed and running locally).
