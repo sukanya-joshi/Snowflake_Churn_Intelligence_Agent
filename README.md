@@ -41,3 +41,10 @@ streamlit run data_agent_demo.py
 ```
 
 The streamlit uses python code auto-generated using https://openapi-generator.tech/. It creates the pydantic classes in /models for the request and response objects based on the OpenAPI spec at cortexagent-run.yaml. You can regenerate those files by running the script openapi-generator.sh (assuming you have docker installed and running locally).
+
+Streamlit App Screenshots:
+<img width="1694" height="817" alt="Screenshot 2025-10-15 at 3 10 44 PM" src="https://github.com/user-attachments/assets/86171dc7-83dc-4f87-97af-f38ea562fdd1" />
+<img width="1696" height="908" alt="Screenshot 2025-10-15 at 3 11 06 PM" src="https://github.com/user-attachments/assets/16c30b4d-bb76-4e68-919b-135ad4e9c075" />
+<img width="1693" height="831" alt="Screenshot 2025-10-15 at 3 12 08 PM" src="https://github.com/user-attachments/assets/58a54266-92ea-4b32-afa2-d0915dc711c0" />
+<img width="1691" height="893" alt="Screenshot 2025-10-15 at 3 12 22 PM" src="https://github.com/user-attachments/assets/0613421a-c7a7-4be5-a7ac-51038a17a69a" />
+
