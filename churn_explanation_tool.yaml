@@ -1,0 +1,177 @@
+name: CHURN_EXPLANATION_TOOL
+tables:
+  - name: CHURN_DATA_EXPLANATIONS
+    description: This table stores customer data and explanations for churn predictions, including demographic information, usage patterns, and subscription details, to help analyze and understand the factors contributing to customer churn.
+    base_table:
+      database: SAMPLE_DB
+      schema: SAMPLE_SCHEMA
+      table: CHURN_DATA_EXPLANATIONS
+    dimensions:
+      - name: CONTRACT_LENGTH
+        description: The length of time a customer has committed to their contract with the company, which can be quarterly, monthly, or annual.
+        expr: CONTRACT_LENGTH
+        data_type: VARCHAR(16777216)
+        sample_values:
+          - Quarterly
+          - Monthly
+          - Annual
+      - name: CUSTOMERID
+        description: Unique identifier for each customer in the dataset.
+        expr: CUSTOMERID
+        data_type: NUMBER(38,0)
+        sample_values:
+          - '4198'
+          - '3048'
+          - '260'
+      - name: GENDER
+        description: The gender of the customer, either male or female.
+        expr: GENDER
+        data_type: VARCHAR(16777216)
+        sample_values:
+          - Male
+          - Female
+      - name: SUBSCRIPTION_TYPE
+        description: The type of subscription plan a customer is enrolled in, which determines the level of service and features they have access to.
+        expr: SUBSCRIPTION_TYPE
+        data_type: VARCHAR(16777216)
+        sample_values:
+          - Premium
+          - Basic
+          - Standard
+    facts:
+      - name: AGE
+        description: The age of the customer at the time of the data collection, which can be used to analyze how age relates to customer churn behavior.
+        expr: AGE
+        data_type: NUMBER(38,0)
+        access_modifier: public_access
+        sample_values:
+          - '21'
+          - '40'
+          - '47'
+      - name: CHURN
+        description: Indicates whether a customer has churned (ended their subscription or service) with the company, where 1 represents a churned customer and 0 represents an active customer.
+        expr: CHURN
+        data_type: NUMBER(38,0)
+        access_modifier: public_access
+        sample_values:
+          - '1'
+          - '0'
+      - name: CHURN_PREDICTION
+        description: Indicates whether a customer is predicted to churn (1) or not (0).
+        expr: CHURN_PREDICTION
+        data_type: NUMBER(38,0)
+        access_modifier: public_access
+        sample_values:
+          - '1'
+          - '0'
+      - name: CHURN_PREDICTION_PROB
+        description: The probability of a customer churning, with values ranging from 0 (low likelihood) to 1 (high likelihood), indicating the predicted likelihood of a customer cancelling their service or subscription.
+        expr: CHURN_PREDICTION_PROB
+        data_type: FLOAT
+        access_modifier: public_access
+        sample_values:
+          - '1'
+          - '0.995'
+          - '0.7102'
+      - name: GENDER_GENDER_EXPLANATION
+        expr: '"gender__GENDER_explanation"'
+        data_type: FLOAT
+        access_modifier: public_access
+      - name: LAST_INTERACTION
+        description: The number of days since the customer's last interaction with the company.
+        expr: LAST_INTERACTION
+        data_type: NUMBER(38,0)
+        access_modifier: public_access
+        sample_values:
+          - '4'
+          - '22'
+          - '2'
+      - name: NUMERIC_AGE_EXPLANATION
+        expr: '"numeric__AGE_explanation"'
+        data_type: FLOAT
+        access_modifier: public_access
+      - name: NUMERIC_LAST_INTERACTION_EXPLANATION
+        expr: '"numeric__LAST_INTERACTION_explanation"'
+        data_type: FLOAT
+        access_modifier: public_access
+      - name: NUMERIC_PAYMENT_DELAY_EXPLANATION
+        expr: '"numeric__PAYMENT_DELAY_explanation"'
+        data_type: FLOAT
+        access_modifier: public_access
+      - name: NUMERIC_SUPPORT_CALLS_EXPLANATION
+        expr: '"numeric__SUPPORT_CALLS_explanation"'
+        data_type: FLOAT
+        access_modifier: public_access
+      - name: NUMERIC_TENURE_EXPLANATION
+        expr: '"numeric__TENURE_explanation"'
+        data_type: FLOAT
+        access_modifier: public_access
+      - name: NUMERIC_TOTAL_SPEND_EXPLANATION
+        expr: '"numeric__TOTAL_SPEND_explanation"'
+        data_type: FLOAT
+        access_modifier: public_access
+      - name: NUMERIC_USAGE_FREQUENCY_EXPLANATION
+        expr: '"numeric__USAGE_FREQUENCY_explanation"'
+        data_type: FLOAT
+        access_modifier: public_access
+      - name: OHE_SUBSCRIPTION_TYPE_BASIC_EXPLANATION
+        expr: '"ohe__SUBSCRIPTION_TYPE_Basic_explanation"'
+        data_type: FLOAT
+        access_modifier: public_access
+      - name: OHE_SUBSCRIPTION_TYPE_PREMIUM_EXPLANATION
+        expr: '"ohe__SUBSCRIPTION_TYPE_Premium_explanation"'
+        data_type: FLOAT
+        access_modifier: public_access
+      - name: OHE_SUBSCRIPTION_TYPE_STANDARD_EXPLANATION
+        expr: '"ohe__SUBSCRIPTION_TYPE_Standard_explanation"'
+        data_type: FLOAT
+        access_modifier: public_access
+      - name: ORD_CONTRACT_LENGTH_EXPLANATION
+        expr: '"ord__CONTRACT_LENGTH_explanation"'
+        data_type: FLOAT
+        access_modifier: public_access
+      - name: PAYMENT_DELAY
+        description: The number of days a customer is late with their payment.
+        expr: PAYMENT_DELAY
+        data_type: NUMBER(38,0)
+        access_modifier: public_access
+        sample_values:
+          - '9'
+          - '22'
+          - '7'
+      - name: SUPPORT_CALLS
+        description: The number of support calls made by a customer, indicating the frequency of their interactions with the company's support team, potentially reflecting their level of satisfaction or issues with the service.
+        expr: SUPPORT_CALLS
+        data_type: NUMBER(38,0)
+        access_modifier: public_access
+        sample_values:
+          - '4'
+          - '8'
+          - '9'
+      - name: TENURE
+        description: The length of time, in months, that a customer has been with the company.
+        expr: TENURE
+        data_type: NUMBER(38,0)
+        access_modifier: public_access
+        sample_values:
+          - '30'
+          - '2'
+          - '55'
+      - name: TOTAL_SPEND
+        description: The total amount spent by a customer over a specific period of time, typically used to measure customer value and loyalty.
+        expr: TOTAL_SPEND
+        data_type: NUMBER(38,0)
+        access_modifier: public_access
+        sample_values:
+          - '176'
+          - '309'
+          - '261'
+      - name: USAGE_FREQUENCY
+        description: The frequency at which customers use the service, with higher values indicating more frequent usage.
+        expr: USAGE_FREQUENCY
+        data_type: NUMBER(38,0)
+        access_modifier: public_access
+        sample_values:
+          - '29'
+          - '1'
+          - '13'
