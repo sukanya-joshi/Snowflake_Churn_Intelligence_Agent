@@ -1,6 +1,16 @@
 # Churn Intelligence Agent using Snowflake ML and Snowflake Intelligence
 This is a project which combines Snowflake ML and AI to build a churn intelligence agent.
 
+### Streamlit App Screenshots:
+<img width="1694" height="817" alt="Screenshot 2025-10-15 at 3 10 44 PM" src="https://github.com/user-attachments/assets/86171dc7-83dc-4f87-97af-f38ea562fdd1" />
+
+<img width="1696" height="908" alt="Screenshot 2025-10-15 at 3 11 06 PM" src="https://github.com/user-attachments/assets/16c30b4d-bb76-4e68-919b-135ad4e9c075" />
+
+<img width="1693" height="831" alt="Screenshot 2025-10-15 at 3 12 08 PM" src="https://github.com/user-attachments/assets/58a54266-92ea-4b32-afa2-d0915dc711c0" />
+<img width="1691" height="893" alt="Screenshot 2025-10-15 at 3 12 22 PM" src="https://github.com/user-attachments/assets/0613421a-c7a7-4be5-a7ac-51038a17a69a" />
+
+Dataset referenced from Kaggle: https://www.kaggle.com/datasets/muhammadshahidazeem/customer-churn-dataset/data?select=customer_churn_dataset-training-master.csv
+
 ## Step-By-Step Guide
 
 ### Easiest Implementation of Streamlit App (without ML):
@@ -51,15 +61,3 @@ The streamlit uses python code auto-generated using https://openapi-generator.te
 2. Import and run the Churn_ML_Modeling.ipynb into a Container Runtime Notebook using Snowsight. Once you run this, there will be a table that gets saved called "CHURN_DATA_EXPLANATIONS". This is the same data as the CHURN_DATA_EXPLANATIONS.csv in the repo.
 
 3. Repeat Steps 2-5 from the Easiest Implementation of Streamlit App (without ML) section at the top. 
-
-### Streamlit App Screenshots:
-<img width="1694" height="817" alt="Screenshot 2025-10-15 at 3 10 44 PM" src="https://github.com/user-attachments/assets/86171dc7-83dc-4f87-97af-f38ea562fdd1" />
-
-<img width="1696" height="908" alt="Screenshot 2025-10-15 at 3 11 06 PM" src="https://github.com/user-attachments/assets/16c30b4d-bb76-4e68-919b-135ad4e9c075" />
-
-<img width="1693" height="831" alt="Screenshot 2025-10-15 at 3 12 08 PM" src="https://github.com/user-attachments/assets/58a54266-92ea-4b32-afa2-d0915dc711c0" />
-<img width="1691" height="893" alt="Screenshot 2025-10-15 at 3 12 22 PM" src="https://github.com/user-attachments/assets/0613421a-c7a7-4be5-a7ac-51038a17a69a" />
-
-
-Dataset referenced from Kaggle: https://www.kaggle.com/datasets/muhammadshahidazeem/customer-churn-dataset/data?select=customer_churn_dataset-training-master.csv
-
