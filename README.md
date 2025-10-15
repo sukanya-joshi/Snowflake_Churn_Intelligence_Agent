@@ -21,7 +21,7 @@ Create the Agent in Snowsight navigating to AI & ML » Agents » Create Agent (s
 After creating you can chat with the Agent via Snowflake Intelligence. In Snowsight, click on AI & ML » Snowflake Intelligence, select the CHURN_INTELLIGENCE_AGENT in the chat bar, and ask any questions you'd like!
 
 5. Run the streamlit
-Now that you have created your agent, run the sample streamlit to interact with it. Make sure to populate the PAT and HOST params correctly. (Note: this guide was built using Python 3.11)
+Now that you have created your agent, run the sample streamlit to interact with it. First, clone this repository in your local VSCode. Then, make sure to populate the PAT and HOST params correctly. (Note: this guide was built using Python 3.11). Be sure to modify your data_agent_demo.py to include your own file path for the csv.
 
 ```bash
 # 1. Set up Python virtual environment
