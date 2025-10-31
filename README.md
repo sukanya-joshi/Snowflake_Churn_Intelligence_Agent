@@ -1,5 +1,5 @@
 # Churn Intelligence Agent using Snowflake ML and Snowflake Intelligence
-This is a project which combines Snowflake ML and AI to build a churn intelligence agent.
+This is a project which combines Snowflake ML and AI to build a churn intelligence agent. Please refer to this github repo from the Snowflake that this was cloned from: https://github.com/Snowflake-Labs/sfguide-getting-started-with-cortex-agents/tree/main 
 
 ### Streamlit App Screenshots:
 <img width="1694" height="817" alt="Screenshot 2025-10-15 at 3 10 44 PM" src="https://github.com/user-attachments/assets/86171dc7-83dc-4f87-97af-f38ea562fdd1" />
